@@ -1,0 +1,5068 @@
+=============================Summary of Model ode1==============================
+Config: {
+ "batch_size": 100,
+ "num_epochs": 1000,
+ "lr": 0.001,
+ "loss_log_interval": 50,
+ "optimizer_type": "AdamW",
+ "sampling_method": "UniformRandom",
+ "refinement_rounds": 5,
+ "loss_balancing": false,
+ "bernoulli_prob": 0.9999,
+ "loss_balancing_temp": 0.1,
+ "loss_balancing_alpha": 0.999,
+ "soft_adapt_interval": -1,
+ "loss_soft_attention": false
+}
+Latex Variable Mapping:
+{}
+User Defined Parameters:
+{}
+
+================================State Variables=================================
+t: [-2.0, 2.0]
+
+=====================================Agents=====================================
+
+================================Agent Conditions================================
+
+==============================Endogenous Variables==============================
+Endogenous Variable Name: x
+EndogVar(
+  (model): Sequential(
+    (linear_0): Linear(in_features=1, out_features=30, bias=True)
+    (activation_0): Tanh()
+    (linear_1): Linear(in_features=30, out_features=30, bias=True)
+    (activation_1): Tanh()
+    (linear_2): Linear(in_features=30, out_features=30, bias=True)
+    (activation_2): Tanh()
+    (linear_3): Linear(in_features=30, out_features=30, bias=True)
+    (activation_3): Tanh()
+    (final_layer): Linear(in_features=30, out_features=1, bias=True)
+  )
+)
+Num parameters: 2881
+--------------------------------------------------------------------------------
+
+========================Endogenous Variables Conditions=========================
+endogvar_x_cond_initial_condition: x(SV)=1 with LHS evaluated at SV=[[0.0]]; 
+Loss weight: 1.0
+--------------------------------------------------------------------------------
+
+===================================Equations====================================
+
+==============================Endogenous Equations==============================
+endogeq_base_ode: 
+Raw input: $\frac{\partial x}{\partial t} = 2 * t$
+Parsed: x_t=2 * t
+Loss weight: 1.0
+--------------------------------------------------------------------------------
+
+==================================Constraints===================================
+
+=================================HJB Equations==================================
+
+====================================Systems=====================================
+
+
+epoch 0: 
+train loss :: endogeq_base_ode: 5.3092,
+endogvar_x_cond_initial_condition: 1.4503,
+total_loss: 6.7596,
+time elapsed :: 0.01776885986328125
+epoch 1: 
+train loss :: endogeq_base_ode: 4.9134,
+endogvar_x_cond_initial_condition: 1.3648,
+total_loss: 6.2782,
+time elapsed :: 0.004989147186279297
+epoch 2: 
+train loss :: endogeq_base_ode: 5.8190,
+endogvar_x_cond_initial_condition: 1.2836,
+total_loss: 7.1025,
+time elapsed :: 0.0019998550415039062
+epoch 3: 
+train loss :: endogeq_base_ode: 5.2366,
+endogvar_x_cond_initial_condition: 1.2046,
+total_loss: 6.4412,
+time elapsed :: 0.0020003318786621094
+epoch 4: 
+train loss :: endogeq_base_ode: 5.8432,
+endogvar_x_cond_initial_condition: 1.1270,
+total_loss: 6.9702,
+time elapsed :: 0.002999544143676758
+epoch 5: 
+train loss :: endogeq_base_ode: 5.8497,
+endogvar_x_cond_initial_condition: 1.0513,
+total_loss: 6.9011,
+time elapsed :: 0.0019998550415039062
+epoch 6: 
+train loss :: endogeq_base_ode: 5.0535,
+endogvar_x_cond_initial_condition: 0.9773,
+total_loss: 6.0308,
+time elapsed :: 0.0020003318786621094
+epoch 7: 
+train loss :: endogeq_base_ode: 5.8787,
+endogvar_x_cond_initial_condition: 0.9039,
+total_loss: 6.7826,
+time elapsed :: 0.0019998550415039062
+epoch 8: 
+train loss :: endogeq_base_ode: 4.8406,
+endogvar_x_cond_initial_condition: 0.8332,
+total_loss: 5.6738,
+time elapsed :: 0.002025604248046875
+epoch 9: 
+train loss :: endogeq_base_ode: 5.6676,
+endogvar_x_cond_initial_condition: 0.7641,
+total_loss: 6.4317,
+time elapsed :: 0.002003908157348633
+epoch 10: 
+train loss :: endogeq_base_ode: 6.3468,
+endogvar_x_cond_initial_condition: 0.6980,
+total_loss: 7.0448,
+time elapsed :: 0.0020024776458740234
+epoch 11: 
+train loss :: endogeq_base_ode: 5.6242,
+endogvar_x_cond_initial_condition: 0.6345,
+total_loss: 6.2587,
+time elapsed :: 0.002002239227294922
+epoch 12: 
+train loss :: endogeq_base_ode: 6.3831,
+endogvar_x_cond_initial_condition: 0.5736,
+total_loss: 6.9568,
+time elapsed :: 0.0020017623901367188
+epoch 13: 
+train loss :: endogeq_base_ode: 5.7324,
+endogvar_x_cond_initial_condition: 0.5167,
+total_loss: 6.2491,
+time elapsed :: 0.0020017623901367188
+epoch 14: 
+train loss :: endogeq_base_ode: 5.9534,
+endogvar_x_cond_initial_condition: 0.4631,
+total_loss: 6.4165,
+time elapsed :: 0.0020024776458740234
+epoch 15: 
+train loss :: endogeq_base_ode: 5.8201,
+endogvar_x_cond_initial_condition: 0.4128,
+total_loss: 6.2329,
+time elapsed :: 0.0017426013946533203
+epoch 16: 
+train loss :: endogeq_base_ode: 5.6588,
+endogvar_x_cond_initial_condition: 0.3662,
+total_loss: 6.0250,
+time elapsed :: 0.0020020008087158203
+epoch 17: 
+train loss :: endogeq_base_ode: 5.9428,
+endogvar_x_cond_initial_condition: 0.3228,
+total_loss: 6.2656,
+time elapsed :: 0.0020020008087158203
+epoch 18: 
+train loss :: endogeq_base_ode: 5.7818,
+endogvar_x_cond_initial_condition: 0.2836,
+total_loss: 6.0654,
+time elapsed :: 0.0020020008087158203
+epoch 19: 
+train loss :: endogeq_base_ode: 5.9409,
+endogvar_x_cond_initial_condition: 0.2477,
+total_loss: 6.1886,
+time elapsed :: 0.002001523971557617
+epoch 20: 
+train loss :: endogeq_base_ode: 5.0944,
+endogvar_x_cond_initial_condition: 0.2151,
+total_loss: 5.3095,
+time elapsed :: 0.0020020008087158203
+epoch 21: 
+train loss :: endogeq_base_ode: 5.5797,
+endogvar_x_cond_initial_condition: 0.1854,
+total_loss: 5.7650,
+time elapsed :: 0.0020017623901367188
+epoch 22: 
+train loss :: endogeq_base_ode: 5.2828,
+endogvar_x_cond_initial_condition: 0.1588,
+total_loss: 5.4416,
+time elapsed :: 0.0020020008087158203
+epoch 23: 
+train loss :: endogeq_base_ode: 5.0422,
+endogvar_x_cond_initial_condition: 0.1353,
+total_loss: 5.1775,
+time elapsed :: 0.0027840137481689453
+epoch 24: 
+train loss :: endogeq_base_ode: 5.7674,
+endogvar_x_cond_initial_condition: 0.1148,
+total_loss: 5.8822,
+time elapsed :: 0.0019979476928710938
+epoch 25: 
+train loss :: endogeq_base_ode: 5.3999,
+endogvar_x_cond_initial_condition: 0.0974,
+total_loss: 5.4973,
+time elapsed :: 0.002000093460083008
+epoch 26: 
+train loss :: endogeq_base_ode: 4.8042,
+endogvar_x_cond_initial_condition: 0.0830,
+total_loss: 4.8872,
+time elapsed :: 0.0019998550415039062
+epoch 27: 
+train loss :: endogeq_base_ode: 4.8807,
+endogvar_x_cond_initial_condition: 0.0708,
+total_loss: 4.9515,
+time elapsed :: 0.002000093460083008
+epoch 28: 
+train loss :: endogeq_base_ode: 5.5785,
+endogvar_x_cond_initial_condition: 0.0608,
+total_loss: 5.6394,
+time elapsed :: 0.0019998550415039062
+epoch 29: 
+train loss :: endogeq_base_ode: 5.9968,
+endogvar_x_cond_initial_condition: 0.0533,
+total_loss: 6.0501,
+time elapsed :: 0.0015022754669189453
+epoch 30: 
+train loss :: endogeq_base_ode: 4.7710,
+endogvar_x_cond_initial_condition: 0.0481,
+total_loss: 4.8191,
+time elapsed :: 0.0019998550415039062
+epoch 31: 
+train loss :: endogeq_base_ode: 4.9654,
+endogvar_x_cond_initial_condition: 0.0446,
+total_loss: 5.0099,
+time elapsed :: 0.002001523971557617
+epoch 32: 
+train loss :: endogeq_base_ode: 6.0547,
+endogvar_x_cond_initial_condition: 0.0428,
+total_loss: 6.0975,
+time elapsed :: 0.0019989013671875
+epoch 33: 
+train loss :: endogeq_base_ode: 4.9430,
+endogvar_x_cond_initial_condition: 0.0431,
+total_loss: 4.9861,
+time elapsed :: 0.0019996166229248047
+epoch 34: 
+train loss :: endogeq_base_ode: 4.6586,
+endogvar_x_cond_initial_condition: 0.0451,
+total_loss: 4.7037,
+time elapsed :: 0.002000093460083008
+epoch 35: 
+train loss :: endogeq_base_ode: 4.8849,
+endogvar_x_cond_initial_condition: 0.0491,
+total_loss: 4.9340,
+time elapsed :: 0.002000093460083008
+epoch 36: 
+train loss :: endogeq_base_ode: 5.0533,
+endogvar_x_cond_initial_condition: 0.0556,
+total_loss: 5.1088,
+time elapsed :: 0.0030002593994140625
+epoch 37: 
+train loss :: endogeq_base_ode: 4.4057,
+endogvar_x_cond_initial_condition: 0.0650,
+total_loss: 4.4707,
+time elapsed :: 0.002000093460083008
+epoch 38: 
+train loss :: endogeq_base_ode: 4.1779,
+endogvar_x_cond_initial_condition: 0.0777,
+total_loss: 4.2556,
+time elapsed :: 0.0009999275207519531
+epoch 39: 
+train loss :: endogeq_base_ode: 4.4496,
+endogvar_x_cond_initial_condition: 0.0941,
+total_loss: 4.5437,
+time elapsed :: 0.00202178955078125
+epoch 40: 
+train loss :: endogeq_base_ode: 4.5328,
+endogvar_x_cond_initial_condition: 0.1138,
+total_loss: 4.6466,
+time elapsed :: 0.002002716064453125
+epoch 41: 
+train loss :: endogeq_base_ode: 3.4286,
+endogvar_x_cond_initial_condition: 0.1385,
+total_loss: 3.5671,
+time elapsed :: 0.002002239227294922
+epoch 42: 
+train loss :: endogeq_base_ode: 3.7289,
+endogvar_x_cond_initial_condition: 0.1665,
+total_loss: 3.8954,
+time elapsed :: 0.0020017623901367188
+epoch 43: 
+train loss :: endogeq_base_ode: 3.9430,
+endogvar_x_cond_initial_condition: 0.1971,
+total_loss: 4.1401,
+time elapsed :: 0.0020017623901367188
+epoch 44: 
+train loss :: endogeq_base_ode: 3.9145,
+endogvar_x_cond_initial_condition: 0.2277,
+total_loss: 4.1421,
+time elapsed :: 0.0020024776458740234
+epoch 45: 
+train loss :: endogeq_base_ode: 3.1575,
+endogvar_x_cond_initial_condition: 0.2590,
+total_loss: 3.4165,
+time elapsed :: 0.0017426013946533203
+epoch 46: 
+train loss :: endogeq_base_ode: 3.5734,
+endogvar_x_cond_initial_condition: 0.2829,
+total_loss: 3.8563,
+time elapsed :: 0.0020024776458740234
+epoch 47: 
+train loss :: endogeq_base_ode: 3.4782,
+endogvar_x_cond_initial_condition: 0.3026,
+total_loss: 3.7808,
+time elapsed :: 0.002002239227294922
+epoch 48: 
+train loss :: endogeq_base_ode: 3.0524,
+endogvar_x_cond_initial_condition: 0.3128,
+total_loss: 3.3652,
+time elapsed :: 0.0020020008087158203
+epoch 49: 
+train loss :: endogeq_base_ode: 3.0632,
+endogvar_x_cond_initial_condition: 0.3083,
+total_loss: 3.3715,
+time elapsed :: 0.0020020008087158203
+epoch 50: 
+train loss :: endogeq_base_ode: 2.4265,
+endogvar_x_cond_initial_condition: 0.2952,
+total_loss: 2.7216,
+time elapsed :: 0.004003763198852539
+epoch 51: 
+train loss :: endogeq_base_ode: 3.6826,
+endogvar_x_cond_initial_condition: 0.2649,
+total_loss: 3.9475,
+time elapsed :: 0.002003192901611328
+epoch 52: 
+train loss :: endogeq_base_ode: 2.6563,
+endogvar_x_cond_initial_condition: 0.2375,
+total_loss: 2.8939,
+time elapsed :: 0.0037941932678222656
+epoch 53: 
+train loss :: endogeq_base_ode: 2.6632,
+endogvar_x_cond_initial_condition: 0.2058,
+total_loss: 2.8690,
+time elapsed :: 0.002000093460083008
+epoch 54: 
+train loss :: endogeq_base_ode: 2.8022,
+endogvar_x_cond_initial_condition: 0.1752,
+total_loss: 2.9773,
+time elapsed :: 0.0019998550415039062
+epoch 55: 
+train loss :: endogeq_base_ode: 2.7183,
+endogvar_x_cond_initial_condition: 0.1556,
+total_loss: 2.8739,
+time elapsed :: 0.003000020980834961
+epoch 56: 
+train loss :: endogeq_base_ode: 2.8369,
+endogvar_x_cond_initial_condition: 0.1502,
+total_loss: 2.9872,
+time elapsed :: 0.0019998550415039062
+epoch 57: 
+train loss :: endogeq_base_ode: 3.2654,
+endogvar_x_cond_initial_condition: 0.1604,
+total_loss: 3.4258,
+time elapsed :: 0.0020003318786621094
+epoch 58: 
+train loss :: endogeq_base_ode: 2.4715,
+endogvar_x_cond_initial_condition: 0.1904,
+total_loss: 2.6619,
+time elapsed :: 0.002000093460083008
+epoch 59: 
+train loss :: endogeq_base_ode: 2.0846,
+endogvar_x_cond_initial_condition: 0.2139,
+total_loss: 2.2985,
+time elapsed :: 0.0020220279693603516
+epoch 60: 
+train loss :: endogeq_base_ode: 2.3521,
+endogvar_x_cond_initial_condition: 0.2127,
+total_loss: 2.5648,
+time elapsed :: 0.0020029544830322266
+epoch 61: 
+train loss :: endogeq_base_ode: 2.3785,
+endogvar_x_cond_initial_condition: 0.1796,
+total_loss: 2.5580,
+time elapsed :: 0.0020024776458740234
+epoch 62: 
+train loss :: endogeq_base_ode: 1.9349,
+endogvar_x_cond_initial_condition: 0.1487,
+total_loss: 2.0836,
+time elapsed :: 0.0020020008087158203
+epoch 63: 
+train loss :: endogeq_base_ode: 1.4802,
+endogvar_x_cond_initial_condition: 0.1102,
+total_loss: 1.5904,
+time elapsed :: 0.0020017623901367188
+epoch 64: 
+train loss :: endogeq_base_ode: 2.2161,
+endogvar_x_cond_initial_condition: 0.0638,
+total_loss: 2.2798,
+time elapsed :: 0.0020020008087158203
+epoch 65: 
+train loss :: endogeq_base_ode: 1.6688,
+endogvar_x_cond_initial_condition: 0.0421,
+total_loss: 1.7109,
+time elapsed :: 0.002002716064453125
+epoch 66: 
+train loss :: endogeq_base_ode: 2.4273,
+endogvar_x_cond_initial_condition: 0.0359,
+total_loss: 2.4632,
+time elapsed :: 0.0017428398132324219
+epoch 67: 
+train loss :: endogeq_base_ode: 2.6152,
+endogvar_x_cond_initial_condition: 0.0566,
+total_loss: 2.6718,
+time elapsed :: 0.0028417110443115234
+epoch 68: 
+train loss :: endogeq_base_ode: 2.4380,
+endogvar_x_cond_initial_condition: 0.1143,
+total_loss: 2.5523,
+time elapsed :: 0.002002716064453125
+epoch 69: 
+train loss :: endogeq_base_ode: 1.6702,
+endogvar_x_cond_initial_condition: 0.1906,
+total_loss: 1.8608,
+time elapsed :: 0.0020020008087158203
+epoch 70: 
+train loss :: endogeq_base_ode: 1.7706,
+endogvar_x_cond_initial_condition: 0.1932,
+total_loss: 1.9638,
+time elapsed :: 0.002002239227294922
+epoch 71: 
+train loss :: endogeq_base_ode: 2.5410,
+endogvar_x_cond_initial_condition: 0.1386,
+total_loss: 2.6795,
+time elapsed :: 0.0020017623901367188
+epoch 72: 
+train loss :: endogeq_base_ode: 2.0014,
+endogvar_x_cond_initial_condition: 0.0892,
+total_loss: 2.0906,
+time elapsed :: 0.0020017623901367188
+epoch 73: 
+train loss :: endogeq_base_ode: 1.7424,
+endogvar_x_cond_initial_condition: 0.0517,
+total_loss: 1.7941,
+time elapsed :: 0.0030040740966796875
+epoch 74: 
+train loss :: endogeq_base_ode: 2.1013,
+endogvar_x_cond_initial_condition: 0.0347,
+total_loss: 2.1360,
+time elapsed :: 0.002004861831665039
+epoch 75: 
+train loss :: endogeq_base_ode: 2.3146,
+endogvar_x_cond_initial_condition: 0.0418,
+total_loss: 2.3564,
+time elapsed :: 0.0030059814453125
+epoch 76: 
+train loss :: endogeq_base_ode: 2.0600,
+endogvar_x_cond_initial_condition: 0.0805,
+total_loss: 2.1405,
+time elapsed :: 0.0020020008087158203
+epoch 77: 
+train loss :: endogeq_base_ode: 2.2039,
+endogvar_x_cond_initial_condition: 0.1492,
+total_loss: 2.3531,
+time elapsed :: 0.002002239227294922
+epoch 78: 
+train loss :: endogeq_base_ode: 1.8621,
+endogvar_x_cond_initial_condition: 0.2053,
+total_loss: 2.0674,
+time elapsed :: 0.002002239227294922
+epoch 79: 
+train loss :: endogeq_base_ode: 1.8718,
+endogvar_x_cond_initial_condition: 0.1931,
+total_loss: 2.0649,
+time elapsed :: 0.0020036697387695312
+epoch 80: 
+train loss :: endogeq_base_ode: 1.2999,
+endogvar_x_cond_initial_condition: 0.1451,
+total_loss: 1.4450,
+time elapsed :: 0.003005504608154297
+epoch 81: 
+train loss :: endogeq_base_ode: 1.2142,
+endogvar_x_cond_initial_condition: 0.0779,
+total_loss: 1.2921,
+time elapsed :: 0.003064393997192383
+epoch 82: 
+train loss :: endogeq_base_ode: 1.4834,
+endogvar_x_cond_initial_condition: 0.0290,
+total_loss: 1.5124,
+time elapsed :: 0.0019996166229248047
+epoch 83: 
+train loss :: endogeq_base_ode: 1.2706,
+endogvar_x_cond_initial_condition: 0.0148,
+total_loss: 1.2854,
+time elapsed :: 0.002000093460083008
+epoch 84: 
+train loss :: endogeq_base_ode: 1.3905,
+endogvar_x_cond_initial_condition: 0.0214,
+total_loss: 1.4119,
+time elapsed :: 0.0019998550415039062
+epoch 85: 
+train loss :: endogeq_base_ode: 0.9495,
+endogvar_x_cond_initial_condition: 0.0491,
+total_loss: 0.9987,
+time elapsed :: 0.0019998550415039062
+epoch 86: 
+train loss :: endogeq_base_ode: 1.6582,
+endogvar_x_cond_initial_condition: 0.0825,
+total_loss: 1.7406,
+time elapsed :: 0.002000093460083008
+epoch 87: 
+train loss :: endogeq_base_ode: 1.3197,
+endogvar_x_cond_initial_condition: 0.1323,
+total_loss: 1.4521,
+time elapsed :: 0.002000093460083008
+epoch 88: 
+train loss :: endogeq_base_ode: 1.0594,
+endogvar_x_cond_initial_condition: 0.1817,
+total_loss: 1.2411,
+time elapsed :: 0.003000020980834961
+epoch 89: 
+train loss :: endogeq_base_ode: 1.1728,
+endogvar_x_cond_initial_condition: 0.1793,
+total_loss: 1.3522,
+time elapsed :: 0.0020003318786621094
+epoch 90: 
+train loss :: endogeq_base_ode: 0.9792,
+endogvar_x_cond_initial_condition: 0.1434,
+total_loss: 1.1226,
+time elapsed :: 0.0019998550415039062
+epoch 91: 
+train loss :: endogeq_base_ode: 1.6100,
+endogvar_x_cond_initial_condition: 0.0906,
+total_loss: 1.7006,
+time elapsed :: 0.002000093460083008
+epoch 92: 
+train loss :: endogeq_base_ode: 1.3270,
+endogvar_x_cond_initial_condition: 0.0653,
+total_loss: 1.3923,
+time elapsed :: 0.0019998550415039062
+epoch 93: 
+train loss :: endogeq_base_ode: 0.8295,
+endogvar_x_cond_initial_condition: 0.0592,
+total_loss: 0.8887,
+time elapsed :: 0.002000093460083008
+epoch 94: 
+train loss :: endogeq_base_ode: 0.9123,
+endogvar_x_cond_initial_condition: 0.0569,
+total_loss: 0.9693,
+time elapsed :: 0.002964019775390625
+epoch 95: 
+train loss :: endogeq_base_ode: 0.9496,
+endogvar_x_cond_initial_condition: 0.0584,
+total_loss: 1.0080,
+time elapsed :: 0.0019996166229248047
+epoch 96: 
+train loss :: endogeq_base_ode: 0.8995,
+endogvar_x_cond_initial_condition: 0.0671,
+total_loss: 0.9666,
+time elapsed :: 0.0020003318786621094
+epoch 97: 
+train loss :: endogeq_base_ode: 1.0799,
+endogvar_x_cond_initial_condition: 0.0782,
+total_loss: 1.1580,
+time elapsed :: 0.0019998550415039062
+epoch 98: 
+train loss :: endogeq_base_ode: 0.9937,
+endogvar_x_cond_initial_condition: 0.0954,
+total_loss: 1.0891,
+time elapsed :: 0.002000093460083008
+epoch 99: 
+train loss :: endogeq_base_ode: 0.8360,
+endogvar_x_cond_initial_condition: 0.1064,
+total_loss: 0.9424,
+time elapsed :: 0.0019998550415039062
+epoch 100: 
+train loss :: endogeq_base_ode: 1.0361,
+endogvar_x_cond_initial_condition: 0.0991,
+total_loss: 1.1352,
+time elapsed :: 0.004000663757324219
+epoch 101: 
+train loss :: endogeq_base_ode: 0.6016,
+endogvar_x_cond_initial_condition: 0.0900,
+total_loss: 0.6916,
+time elapsed :: 0.0030219554901123047
+epoch 102: 
+train loss :: endogeq_base_ode: 0.7583,
+endogvar_x_cond_initial_condition: 0.0590,
+total_loss: 0.8173,
+time elapsed :: 0.0020036697387695312
+epoch 103: 
+train loss :: endogeq_base_ode: 0.5712,
+endogvar_x_cond_initial_condition: 0.0378,
+total_loss: 0.6090,
+time elapsed :: 0.0020029544830322266
+epoch 104: 
+train loss :: endogeq_base_ode: 0.8289,
+endogvar_x_cond_initial_condition: 0.0240,
+total_loss: 0.8529,
+time elapsed :: 0.0020034313201904297
+epoch 105: 
+train loss :: endogeq_base_ode: 0.4880,
+endogvar_x_cond_initial_condition: 0.0287,
+total_loss: 0.5167,
+time elapsed :: 0.0020024776458740234
+epoch 106: 
+train loss :: endogeq_base_ode: 0.5870,
+endogvar_x_cond_initial_condition: 0.0390,
+total_loss: 0.6260,
+time elapsed :: 0.0020017623901367188
+epoch 107: 
+train loss :: endogeq_base_ode: 0.4666,
+endogvar_x_cond_initial_condition: 0.0528,
+total_loss: 0.5194,
+time elapsed :: 0.0037457942962646484
+epoch 108: 
+train loss :: endogeq_base_ode: 0.6177,
+endogvar_x_cond_initial_condition: 0.0530,
+total_loss: 0.6707,
+time elapsed :: 0.0020024776458740234
+epoch 109: 
+train loss :: endogeq_base_ode: 0.4956,
+endogvar_x_cond_initial_condition: 0.0537,
+total_loss: 0.5493,
+time elapsed :: 0.0020017623901367188
+epoch 110: 
+train loss :: endogeq_base_ode: 0.5376,
+endogvar_x_cond_initial_condition: 0.0437,
+total_loss: 0.5814,
+time elapsed :: 0.0020020008087158203
+epoch 111: 
+train loss :: endogeq_base_ode: 0.4966,
+endogvar_x_cond_initial_condition: 0.0350,
+total_loss: 0.5316,
+time elapsed :: 0.002001523971557617
+epoch 112: 
+train loss :: endogeq_base_ode: 0.6349,
+endogvar_x_cond_initial_condition: 0.0281,
+total_loss: 0.6630,
+time elapsed :: 0.0020020008087158203
+epoch 113: 
+train loss :: endogeq_base_ode: 0.5510,
+endogvar_x_cond_initial_condition: 0.0347,
+total_loss: 0.5858,
+time elapsed :: 0.002002239227294922
+epoch 114: 
+train loss :: endogeq_base_ode: 0.3885,
+endogvar_x_cond_initial_condition: 0.0522,
+total_loss: 0.4407,
+time elapsed :: 0.002002239227294922
+epoch 115: 
+train loss :: endogeq_base_ode: 0.2672,
+endogvar_x_cond_initial_condition: 0.0611,
+total_loss: 0.3283,
+time elapsed :: 0.0017428398132324219
+epoch 116: 
+train loss :: endogeq_base_ode: 0.3802,
+endogvar_x_cond_initial_condition: 0.0469,
+total_loss: 0.4271,
+time elapsed :: 0.002621173858642578
+epoch 117: 
+train loss :: endogeq_base_ode: 0.2993,
+endogvar_x_cond_initial_condition: 0.0293,
+total_loss: 0.3286,
+time elapsed :: 0.002002716064453125
+epoch 118: 
+train loss :: endogeq_base_ode: 0.2482,
+endogvar_x_cond_initial_condition: 0.0160,
+total_loss: 0.2642,
+time elapsed :: 0.0020029544830322266
+epoch 119: 
+train loss :: endogeq_base_ode: 0.2839,
+endogvar_x_cond_initial_condition: 0.0081,
+total_loss: 0.2920,
+time elapsed :: 0.002002239227294922
+epoch 120: 
+train loss :: endogeq_base_ode: 0.2016,
+endogvar_x_cond_initial_condition: 0.0072,
+total_loss: 0.2089,
+time elapsed :: 0.0020020008087158203
+epoch 121: 
+train loss :: endogeq_base_ode: 0.2523,
+endogvar_x_cond_initial_condition: 0.0108,
+total_loss: 0.2632,
+time elapsed :: 0.0020024776458740234
+epoch 122: 
+train loss :: endogeq_base_ode: 0.2026,
+endogvar_x_cond_initial_condition: 0.0188,
+total_loss: 0.2213,
+time elapsed :: 0.0030035972595214844
+epoch 123: 
+train loss :: endogeq_base_ode: 0.1811,
+endogvar_x_cond_initial_condition: 0.0279,
+total_loss: 0.2090,
+time elapsed :: 0.002002239227294922
+epoch 124: 
+train loss :: endogeq_base_ode: 0.2003,
+endogvar_x_cond_initial_condition: 0.0317,
+total_loss: 0.2320,
+time elapsed :: 0.0020017623901367188
+epoch 125: 
+train loss :: endogeq_base_ode: 0.1695,
+endogvar_x_cond_initial_condition: 0.0282,
+total_loss: 0.1977,
+time elapsed :: 0.0020017623901367188
+epoch 126: 
+train loss :: endogeq_base_ode: 0.1201,
+endogvar_x_cond_initial_condition: 0.0189,
+total_loss: 0.1391,
+time elapsed :: 0.0020017623901367188
+epoch 127: 
+train loss :: endogeq_base_ode: 0.1274,
+endogvar_x_cond_initial_condition: 0.0085,
+total_loss: 0.1359,
+time elapsed :: 0.0020017623901367188
+epoch 128: 
+train loss :: endogeq_base_ode: 0.1669,
+endogvar_x_cond_initial_condition: 0.0029,
+total_loss: 0.1697,
+time elapsed :: 0.0020020008087158203
+epoch 129: 
+train loss :: endogeq_base_ode: 0.1646,
+endogvar_x_cond_initial_condition: 0.0022,
+total_loss: 0.1668,
+time elapsed :: 0.002002239227294922
+epoch 130: 
+train loss :: endogeq_base_ode: 0.1744,
+endogvar_x_cond_initial_condition: 0.0043,
+total_loss: 0.1788,
+time elapsed :: 0.0027904510498046875
+epoch 131: 
+train loss :: endogeq_base_ode: 0.1183,
+endogvar_x_cond_initial_condition: 0.0111,
+total_loss: 0.1295,
+time elapsed :: 0.0029985904693603516
+epoch 132: 
+train loss :: endogeq_base_ode: 0.0996,
+endogvar_x_cond_initial_condition: 0.0173,
+total_loss: 0.1168,
+time elapsed :: 0.0019998550415039062
+epoch 133: 
+train loss :: endogeq_base_ode: 0.0397,
+endogvar_x_cond_initial_condition: 0.0178,
+total_loss: 0.0576,
+time elapsed :: 0.002000093460083008
+epoch 134: 
+train loss :: endogeq_base_ode: 0.1166,
+endogvar_x_cond_initial_condition: 0.0089,
+total_loss: 0.1255,
+time elapsed :: 0.002000093460083008
+epoch 135: 
+train loss :: endogeq_base_ode: 0.0567,
+endogvar_x_cond_initial_condition: 0.0034,
+total_loss: 0.0601,
+time elapsed :: 0.002000093460083008
+epoch 136: 
+train loss :: endogeq_base_ode: 0.1246,
+endogvar_x_cond_initial_condition: 0.0004,
+total_loss: 0.1250,
+time elapsed :: 0.0020003318786621094
+epoch 137: 
+train loss :: endogeq_base_ode: 0.0921,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0923,
+time elapsed :: 0.002025604248046875
+epoch 138: 
+train loss :: endogeq_base_ode: 0.1111,
+endogvar_x_cond_initial_condition: 0.0011,
+total_loss: 0.1122,
+time elapsed :: 0.003040790557861328
+epoch 139: 
+train loss :: endogeq_base_ode: 0.0791,
+endogvar_x_cond_initial_condition: 0.0047,
+total_loss: 0.0838,
+time elapsed :: 0.001999378204345703
+epoch 140: 
+train loss :: endogeq_base_ode: 0.0531,
+endogvar_x_cond_initial_condition: 0.0095,
+total_loss: 0.0626,
+time elapsed :: 0.002000093460083008
+epoch 141: 
+train loss :: endogeq_base_ode: 0.0627,
+endogvar_x_cond_initial_condition: 0.0098,
+total_loss: 0.0725,
+time elapsed :: 0.0019998550415039062
+epoch 142: 
+train loss :: endogeq_base_ode: 0.0571,
+endogvar_x_cond_initial_condition: 0.0064,
+total_loss: 0.0635,
+time elapsed :: 0.0020003318786621094
+epoch 143: 
+train loss :: endogeq_base_ode: 0.0682,
+endogvar_x_cond_initial_condition: 0.0023,
+total_loss: 0.0705,
+time elapsed :: 0.002000093460083008
+epoch 144: 
+train loss :: endogeq_base_ode: 0.0822,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0826,
+time elapsed :: 0.0019998550415039062
+epoch 145: 
+train loss :: endogeq_base_ode: 0.0780,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0781,
+time elapsed :: 0.003000497817993164
+epoch 146: 
+train loss :: endogeq_base_ode: 0.0673,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0676,
+time elapsed :: 0.0019996166229248047
+epoch 147: 
+train loss :: endogeq_base_ode: 0.0696,
+endogvar_x_cond_initial_condition: 0.0012,
+total_loss: 0.0708,
+time elapsed :: 0.0020008087158203125
+epoch 148: 
+train loss :: endogeq_base_ode: 0.0583,
+endogvar_x_cond_initial_condition: 0.0029,
+total_loss: 0.0612,
+time elapsed :: 0.001999378204345703
+epoch 149: 
+train loss :: endogeq_base_ode: 0.0620,
+endogvar_x_cond_initial_condition: 0.0042,
+total_loss: 0.0662,
+time elapsed :: 0.0019998550415039062
+epoch 150: 
+train loss :: endogeq_base_ode: 0.0610,
+endogvar_x_cond_initial_condition: 0.0044,
+total_loss: 0.0654,
+time elapsed :: 0.00500178337097168
+epoch 151: 
+train loss :: endogeq_base_ode: 0.0784,
+endogvar_x_cond_initial_condition: 0.0031,
+total_loss: 0.0815,
+time elapsed :: 0.0019989013671875
+epoch 152: 
+train loss :: endogeq_base_ode: 0.0660,
+endogvar_x_cond_initial_condition: 0.0020,
+total_loss: 0.0680,
+time elapsed :: 0.0019996166229248047
+epoch 153: 
+train loss :: endogeq_base_ode: 0.0585,
+endogvar_x_cond_initial_condition: 0.0010,
+total_loss: 0.0595,
+time elapsed :: 0.002000093460083008
+epoch 154: 
+train loss :: endogeq_base_ode: 0.0537,
+endogvar_x_cond_initial_condition: 0.0006,
+total_loss: 0.0543,
+time elapsed :: 0.0020003318786621094
+epoch 155: 
+train loss :: endogeq_base_ode: 0.0430,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0433,
+time elapsed :: 0.003000020980834961
+epoch 156: 
+train loss :: endogeq_base_ode: 0.0447,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0449,
+time elapsed :: 0.002000093460083008
+epoch 157: 
+train loss :: endogeq_base_ode: 0.0473,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0474,
+time elapsed :: 0.0009999275207519531
+epoch 158: 
+train loss :: endogeq_base_ode: 0.0391,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0394,
+time elapsed :: 0.002028226852416992
+epoch 159: 
+train loss :: endogeq_base_ode: 0.0494,
+endogvar_x_cond_initial_condition: 0.0005,
+total_loss: 0.0499,
+time elapsed :: 0.002004384994506836
+epoch 160: 
+train loss :: endogeq_base_ode: 0.0447,
+endogvar_x_cond_initial_condition: 0.0010,
+total_loss: 0.0457,
+time elapsed :: 0.002002716064453125
+epoch 161: 
+train loss :: endogeq_base_ode: 0.0519,
+endogvar_x_cond_initial_condition: 0.0013,
+total_loss: 0.0532,
+time elapsed :: 0.002002239227294922
+epoch 162: 
+train loss :: endogeq_base_ode: 0.0540,
+endogvar_x_cond_initial_condition: 0.0014,
+total_loss: 0.0554,
+time elapsed :: 0.002002239227294922
+epoch 163: 
+train loss :: endogeq_base_ode: 0.0478,
+endogvar_x_cond_initial_condition: 0.0020,
+total_loss: 0.0498,
+time elapsed :: 0.004004001617431641
+epoch 164: 
+train loss :: endogeq_base_ode: 0.0375,
+endogvar_x_cond_initial_condition: 0.0021,
+total_loss: 0.0397,
+time elapsed :: 0.002002239227294922
+epoch 165: 
+train loss :: endogeq_base_ode: 0.0425,
+endogvar_x_cond_initial_condition: 0.0012,
+total_loss: 0.0437,
+time elapsed :: 0.0020034313201904297
+epoch 166: 
+train loss :: endogeq_base_ode: 0.0397,
+endogvar_x_cond_initial_condition: 0.0005,
+total_loss: 0.0403,
+time elapsed :: 0.002003192901611328
+epoch 167: 
+train loss :: endogeq_base_ode: 0.0300,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0301,
+time elapsed :: 0.0020020008087158203
+epoch 168: 
+train loss :: endogeq_base_ode: 0.0264,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0264,
+time elapsed :: 0.0020017623901367188
+epoch 169: 
+train loss :: endogeq_base_ode: 0.0485,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0485,
+time elapsed :: 0.0020020008087158203
+epoch 170: 
+train loss :: endogeq_base_ode: 0.0361,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0364,
+time elapsed :: 0.0020020008087158203
+epoch 171: 
+train loss :: endogeq_base_ode: 0.0249,
+endogvar_x_cond_initial_condition: 0.0016,
+total_loss: 0.0265,
+time elapsed :: 0.0020020008087158203
+epoch 172: 
+train loss :: endogeq_base_ode: 0.0350,
+endogvar_x_cond_initial_condition: 0.0024,
+total_loss: 0.0374,
+time elapsed :: 0.0017428398132324219
+epoch 173: 
+train loss :: endogeq_base_ode: 0.0265,
+endogvar_x_cond_initial_condition: 0.0022,
+total_loss: 0.0287,
+time elapsed :: 0.002002716064453125
+epoch 174: 
+train loss :: endogeq_base_ode: 0.0285,
+endogvar_x_cond_initial_condition: 0.0009,
+total_loss: 0.0295,
+time elapsed :: 0.002002239227294922
+epoch 175: 
+train loss :: endogeq_base_ode: 0.0348,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0350,
+time elapsed :: 0.004004001617431641
+epoch 176: 
+train loss :: endogeq_base_ode: 0.0359,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0359,
+time elapsed :: 0.0020020008087158203
+epoch 177: 
+train loss :: endogeq_base_ode: 0.0237,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0239,
+time elapsed :: 0.002002239227294922
+epoch 178: 
+train loss :: endogeq_base_ode: 0.0193,
+endogvar_x_cond_initial_condition: 0.0006,
+total_loss: 0.0199,
+time elapsed :: 0.0020024776458740234
+epoch 179: 
+train loss :: endogeq_base_ode: 0.0316,
+endogvar_x_cond_initial_condition: 0.0009,
+total_loss: 0.0325,
+time elapsed :: 0.0017426013946533203
+epoch 180: 
+train loss :: endogeq_base_ode: 0.0296,
+endogvar_x_cond_initial_condition: 0.0011,
+total_loss: 0.0307,
+time elapsed :: 0.0027189254760742188
+epoch 181: 
+train loss :: endogeq_base_ode: 0.0259,
+endogvar_x_cond_initial_condition: 0.0012,
+total_loss: 0.0272,
+time elapsed :: 0.001999378204345703
+epoch 182: 
+train loss :: endogeq_base_ode: 0.0231,
+endogvar_x_cond_initial_condition: 0.0008,
+total_loss: 0.0240,
+time elapsed :: 0.002000093460083008
+epoch 183: 
+train loss :: endogeq_base_ode: 0.0223,
+endogvar_x_cond_initial_condition: 0.0004,
+total_loss: 0.0227,
+time elapsed :: 0.0019998550415039062
+epoch 184: 
+train loss :: endogeq_base_ode: 0.0216,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0217,
+time elapsed :: 0.002000093460083008
+epoch 185: 
+train loss :: endogeq_base_ode: 0.0274,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0275,
+time elapsed :: 0.0019998550415039062
+epoch 186: 
+train loss :: endogeq_base_ode: 0.0348,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0351,
+time elapsed :: 0.002000093460083008
+epoch 187: 
+train loss :: endogeq_base_ode: 0.0340,
+endogvar_x_cond_initial_condition: 0.0013,
+total_loss: 0.0353,
+time elapsed :: 0.0030231475830078125
+epoch 188: 
+train loss :: endogeq_base_ode: 0.0163,
+endogvar_x_cond_initial_condition: 0.0029,
+total_loss: 0.0192,
+time elapsed :: 0.0020029544830322266
+epoch 189: 
+train loss :: endogeq_base_ode: 0.0247,
+endogvar_x_cond_initial_condition: 0.0026,
+total_loss: 0.0273,
+time elapsed :: 0.0020020008087158203
+epoch 190: 
+train loss :: endogeq_base_ode: 0.0251,
+endogvar_x_cond_initial_condition: 0.0011,
+total_loss: 0.0263,
+time elapsed :: 0.0020020008087158203
+epoch 191: 
+train loss :: endogeq_base_ode: 0.0205,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0208,
+time elapsed :: 0.0020020008087158203
+epoch 192: 
+train loss :: endogeq_base_ode: 0.0287,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0287,
+time elapsed :: 0.0020020008087158203
+epoch 193: 
+train loss :: endogeq_base_ode: 0.0206,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0207,
+time elapsed :: 0.0020017623901367188
+epoch 194: 
+train loss :: endogeq_base_ode: 0.0176,
+endogvar_x_cond_initial_condition: 0.0006,
+total_loss: 0.0182,
+time elapsed :: 0.0017428398132324219
+epoch 195: 
+train loss :: endogeq_base_ode: 0.0215,
+endogvar_x_cond_initial_condition: 0.0012,
+total_loss: 0.0227,
+time elapsed :: 0.0020024776458740234
+epoch 196: 
+train loss :: endogeq_base_ode: 0.0173,
+endogvar_x_cond_initial_condition: 0.0016,
+total_loss: 0.0188,
+time elapsed :: 0.0020020008087158203
+epoch 197: 
+train loss :: endogeq_base_ode: 0.0159,
+endogvar_x_cond_initial_condition: 0.0011,
+total_loss: 0.0169,
+time elapsed :: 0.0020020008087158203
+epoch 198: 
+train loss :: endogeq_base_ode: 0.0148,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0151,
+time elapsed :: 0.0020017623901367188
+epoch 199: 
+train loss :: endogeq_base_ode: 0.0087,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0087,
+time elapsed :: 0.0020020008087158203
+epoch 200: 
+train loss :: endogeq_base_ode: 0.0127,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0128,
+time elapsed :: 0.005748748779296875
+epoch 201: 
+train loss :: endogeq_base_ode: 0.0069,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0070,
+time elapsed :: 0.002046823501586914
+epoch 202: 
+train loss :: endogeq_base_ode: 0.0130,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0130,
+time elapsed :: 0.002000093460083008
+epoch 203: 
+train loss :: endogeq_base_ode: 0.0175,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0177,
+time elapsed :: 0.0019998550415039062
+epoch 204: 
+train loss :: endogeq_base_ode: 0.0133,
+endogvar_x_cond_initial_condition: 0.0010,
+total_loss: 0.0143,
+time elapsed :: 0.002003192901611328
+epoch 205: 
+train loss :: endogeq_base_ode: 0.0176,
+endogvar_x_cond_initial_condition: 0.0011,
+total_loss: 0.0187,
+time elapsed :: 0.0019996166229248047
+epoch 206: 
+train loss :: endogeq_base_ode: 0.0164,
+endogvar_x_cond_initial_condition: 0.0007,
+total_loss: 0.0171,
+time elapsed :: 0.002000093460083008
+epoch 207: 
+train loss :: endogeq_base_ode: 0.0109,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0111,
+time elapsed :: 0.0019998550415039062
+epoch 208: 
+train loss :: endogeq_base_ode: 0.0092,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0092,
+time elapsed :: 0.0020246505737304688
+epoch 209: 
+train loss :: endogeq_base_ode: 0.0083,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0083,
+time elapsed :: 0.002002716064453125
+epoch 210: 
+train loss :: endogeq_base_ode: 0.0093,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0093,
+time elapsed :: 0.0030040740966796875
+epoch 211: 
+train loss :: endogeq_base_ode: 0.0120,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0122,
+time elapsed :: 0.0020020008087158203
+epoch 212: 
+train loss :: endogeq_base_ode: 0.0140,
+endogvar_x_cond_initial_condition: 0.0005,
+total_loss: 0.0144,
+time elapsed :: 0.0020020008087158203
+epoch 213: 
+train loss :: endogeq_base_ode: 0.0083,
+endogvar_x_cond_initial_condition: 0.0009,
+total_loss: 0.0091,
+time elapsed :: 0.0020020008087158203
+epoch 214: 
+train loss :: endogeq_base_ode: 0.0071,
+endogvar_x_cond_initial_condition: 0.0005,
+total_loss: 0.0077,
+time elapsed :: 0.0020024776458740234
+epoch 215: 
+train loss :: endogeq_base_ode: 0.0061,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0062,
+time elapsed :: 0.0010020732879638672
+epoch 216: 
+train loss :: endogeq_base_ode: 0.0080,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0080,
+time elapsed :: 0.0020024776458740234
+epoch 217: 
+train loss :: endogeq_base_ode: 0.0047,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0047,
+time elapsed :: 0.002002239227294922
+epoch 218: 
+train loss :: endogeq_base_ode: 0.0078,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0078,
+time elapsed :: 0.0020020008087158203
+epoch 219: 
+train loss :: endogeq_base_ode: 0.0084,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0084,
+time elapsed :: 0.0020020008087158203
+epoch 220: 
+train loss :: endogeq_base_ode: 0.0071,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0073,
+time elapsed :: 0.0020017623901367188
+epoch 221: 
+train loss :: endogeq_base_ode: 0.0045,
+endogvar_x_cond_initial_condition: 0.0004,
+total_loss: 0.0048,
+time elapsed :: 0.0020020008087158203
+epoch 222: 
+train loss :: endogeq_base_ode: 0.0086,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0088,
+time elapsed :: 0.003744840621948242
+epoch 223: 
+train loss :: endogeq_base_ode: 0.0063,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0063,
+time elapsed :: 0.0020444393157958984
+epoch 224: 
+train loss :: endogeq_base_ode: 0.0062,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0062,
+time elapsed :: 0.0019998550415039062
+epoch 225: 
+train loss :: endogeq_base_ode: 0.0079,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0079,
+time elapsed :: 0.0020008087158203125
+epoch 226: 
+train loss :: endogeq_base_ode: 0.0039,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0040,
+time elapsed :: 0.001999378204345703
+epoch 227: 
+train loss :: endogeq_base_ode: 0.0050,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0052,
+time elapsed :: 0.0019998550415039062
+epoch 228: 
+train loss :: endogeq_base_ode: 0.0045,
+endogvar_x_cond_initial_condition: 0.0004,
+total_loss: 0.0049,
+time elapsed :: 0.0030002593994140625
+epoch 229: 
+train loss :: endogeq_base_ode: 0.0074,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0076,
+time elapsed :: 0.002000093460083008
+epoch 230: 
+train loss :: endogeq_base_ode: 0.0075,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0077,
+time elapsed :: 0.0019998550415039062
+epoch 231: 
+train loss :: endogeq_base_ode: 0.0075,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0075,
+time elapsed :: 0.0020003318786621094
+epoch 232: 
+train loss :: endogeq_base_ode: 0.0050,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0051,
+time elapsed :: 0.002000570297241211
+epoch 233: 
+train loss :: endogeq_base_ode: 0.0093,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0095,
+time elapsed :: 0.002999544143676758
+epoch 234: 
+train loss :: endogeq_base_ode: 0.0042,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0045,
+time elapsed :: 0.0019996166229248047
+epoch 235: 
+train loss :: endogeq_base_ode: 0.0050,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0053,
+time elapsed :: 0.0020003318786621094
+epoch 236: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0015,
+time elapsed :: 0.002000093460083008
+epoch 237: 
+train loss :: endogeq_base_ode: 0.0069,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0069,
+time elapsed :: 0.0019998550415039062
+epoch 238: 
+train loss :: endogeq_base_ode: 0.0059,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0059,
+time elapsed :: 0.0021619796752929688
+epoch 239: 
+train loss :: endogeq_base_ode: 0.0024,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0025,
+time elapsed :: 0.002066373825073242
+epoch 240: 
+train loss :: endogeq_base_ode: 0.0040,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0042,
+time elapsed :: 0.0018451213836669922
+epoch 241: 
+train loss :: endogeq_base_ode: 0.0039,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0041,
+time elapsed :: 0.0029985904693603516
+epoch 242: 
+train loss :: endogeq_base_ode: 0.0018,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0019,
+time elapsed :: 0.002000093460083008
+epoch 243: 
+train loss :: endogeq_base_ode: 0.0034,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0034,
+time elapsed :: 0.0018897056579589844
+epoch 244: 
+train loss :: endogeq_base_ode: 0.0026,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0026,
+time elapsed :: 0.002039670944213867
+epoch 245: 
+train loss :: endogeq_base_ode: 0.0049,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0049,
+time elapsed :: 0.0019996166229248047
+epoch 246: 
+train loss :: endogeq_base_ode: 0.0028,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0029,
+time elapsed :: 0.0025277137756347656
+epoch 247: 
+train loss :: endogeq_base_ode: 0.0041,
+endogvar_x_cond_initial_condition: 0.0003,
+total_loss: 0.0044,
+time elapsed :: 0.0019991397857666016
+epoch 248: 
+train loss :: endogeq_base_ode: 0.0027,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0029,
+time elapsed :: 0.0019996166229248047
+epoch 249: 
+train loss :: endogeq_base_ode: 0.0019,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0020,
+time elapsed :: 0.003000020980834961
+epoch 250: 
+train loss :: endogeq_base_ode: 0.0030,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0030,
+time elapsed :: 0.004002571105957031
+epoch 251: 
+train loss :: endogeq_base_ode: 0.0049,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0050,
+time elapsed :: 0.0030012130737304688
+epoch 252: 
+train loss :: endogeq_base_ode: 0.0021,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0021,
+time elapsed :: 0.0019996166229248047
+epoch 253: 
+train loss :: endogeq_base_ode: 0.0028,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0029,
+time elapsed :: 0.0029990673065185547
+epoch 254: 
+train loss :: endogeq_base_ode: 0.0013,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0014,
+time elapsed :: 0.0019998550415039062
+epoch 255: 
+train loss :: endogeq_base_ode: 0.0026,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0026,
+time elapsed :: 0.002505779266357422
+epoch 256: 
+train loss :: endogeq_base_ode: 0.0018,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0018,
+time elapsed :: 0.002000093460083008
+epoch 257: 
+train loss :: endogeq_base_ode: 0.0018,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0018,
+time elapsed :: 0.002043008804321289
+epoch 258: 
+train loss :: endogeq_base_ode: 0.0021,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0021,
+time elapsed :: 0.0019991397857666016
+epoch 259: 
+train loss :: endogeq_base_ode: 0.0017,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0018,
+time elapsed :: 0.0027468204498291016
+epoch 260: 
+train loss :: endogeq_base_ode: 0.0021,
+endogvar_x_cond_initial_condition: 0.0002,
+total_loss: 0.0023,
+time elapsed :: 0.0022423267364501953
+epoch 261: 
+train loss :: endogeq_base_ode: 0.0039,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0040,
+time elapsed :: 0.0019979476928710938
+epoch 262: 
+train loss :: endogeq_base_ode: 0.0028,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0028,
+time elapsed :: 0.0019998550415039062
+epoch 263: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.002000093460083008
+epoch 264: 
+train loss :: endogeq_base_ode: 0.0017,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0017,
+time elapsed :: 0.0019268989562988281
+epoch 265: 
+train loss :: endogeq_base_ode: 0.0021,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0021,
+time elapsed :: 0.00299835205078125
+epoch 266: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0011,
+time elapsed :: 0.002000093460083008
+epoch 267: 
+train loss :: endogeq_base_ode: 0.0040,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0041,
+time elapsed :: 0.001943826675415039
+epoch 268: 
+train loss :: endogeq_base_ode: 0.0029,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0030,
+time elapsed :: 0.0021331310272216797
+epoch 269: 
+train loss :: endogeq_base_ode: 0.0020,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0021,
+time elapsed :: 0.0019996166229248047
+epoch 270: 
+train loss :: endogeq_base_ode: 0.0018,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0018,
+time elapsed :: 0.002000093460083008
+epoch 271: 
+train loss :: endogeq_base_ode: 0.0015,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0015,
+time elapsed :: 0.002605438232421875
+epoch 272: 
+train loss :: endogeq_base_ode: 0.0016,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0016,
+time elapsed :: 0.003005504608154297
+epoch 273: 
+train loss :: endogeq_base_ode: 0.0015,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0015,
+time elapsed :: 0.0029985904693603516
+epoch 274: 
+train loss :: endogeq_base_ode: 0.0017,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0017,
+time elapsed :: 0.0023581981658935547
+epoch 275: 
+train loss :: endogeq_base_ode: 0.0021,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0021,
+time elapsed :: 0.001998424530029297
+epoch 276: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.003000497817993164
+epoch 277: 
+train loss :: endogeq_base_ode: 0.0023,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0023,
+time elapsed :: 0.002122640609741211
+epoch 278: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.001998424530029297
+epoch 279: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0014,
+time elapsed :: 0.0020003318786621094
+epoch 280: 
+train loss :: endogeq_base_ode: 0.0016,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0016,
+time elapsed :: 0.0019998550415039062
+epoch 281: 
+train loss :: endogeq_base_ode: 0.0021,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0021,
+time elapsed :: 0.003000497817993164
+epoch 282: 
+train loss :: endogeq_base_ode: 0.0029,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0029,
+time elapsed :: 0.002000093460083008
+epoch 283: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0008,
+time elapsed :: 0.003059864044189453
+epoch 284: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019989013671875
+epoch 285: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0014,
+time elapsed :: 0.0019998550415039062
+epoch 286: 
+train loss :: endogeq_base_ode: 0.0021,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0021,
+time elapsed :: 0.002000093460083008
+epoch 287: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019998550415039062
+epoch 288: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0030007362365722656
+epoch 289: 
+train loss :: endogeq_base_ode: 0.0009,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.002999544143676758
+epoch 290: 
+train loss :: endogeq_base_ode: 0.0025,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0025,
+time elapsed :: 0.003174304962158203
+epoch 291: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0018606185913085938
+epoch 292: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0014,
+time elapsed :: 0.002003192901611328
+epoch 293: 
+train loss :: endogeq_base_ode: 0.0020,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0020,
+time elapsed :: 0.001999378204345703
+epoch 294: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0015,
+time elapsed :: 0.0027320384979248047
+epoch 295: 
+train loss :: endogeq_base_ode: 0.0020,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0020,
+time elapsed :: 0.0021927356719970703
+epoch 296: 
+train loss :: endogeq_base_ode: 0.0017,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0017,
+time elapsed :: 0.0019986629486083984
+epoch 297: 
+train loss :: endogeq_base_ode: 0.0018,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0018,
+time elapsed :: 0.002832174301147461
+epoch 298: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020275115966796875
+epoch 299: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019996166229248047
+epoch 300: 
+train loss :: endogeq_base_ode: 0.0009,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.005001544952392578
+epoch 301: 
+train loss :: endogeq_base_ode: 0.0020,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0020,
+time elapsed :: 0.0020003318786621094
+epoch 302: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0029985904693603516
+epoch 303: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0014,
+time elapsed :: 0.002000093460083008
+epoch 304: 
+train loss :: endogeq_base_ode: 0.0011,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0011,
+time elapsed :: 0.0020334720611572266
+epoch 305: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019996166229248047
+epoch 306: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0019998550415039062
+epoch 307: 
+train loss :: endogeq_base_ode: 0.0016,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0016,
+time elapsed :: 0.002885580062866211
+epoch 308: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.0019986629486083984
+epoch 309: 
+train loss :: endogeq_base_ode: 0.0011,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.0030829906463623047
+epoch 310: 
+train loss :: endogeq_base_ode: 0.0011,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0012,
+time elapsed :: 0.002969980239868164
+epoch 311: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019986629486083984
+epoch 312: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0010,
+time elapsed :: 0.0019998550415039062
+epoch 313: 
+train loss :: endogeq_base_ode: 0.0013,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0013,
+time elapsed :: 0.002000093460083008
+epoch 314: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0010,
+time elapsed :: 0.0029458999633789062
+epoch 315: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0011,
+time elapsed :: 0.003256082534790039
+epoch 316: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019981861114501953
+epoch 317: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.002000570297241211
+epoch 318: 
+train loss :: endogeq_base_ode: 0.0015,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0015,
+time elapsed :: 0.0019996166229248047
+epoch 319: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.0019998550415039062
+epoch 320: 
+train loss :: endogeq_base_ode: 0.0017,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0017,
+time elapsed :: 0.002000093460083008
+epoch 321: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0008,
+time elapsed :: 0.0030002593994140625
+epoch 322: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0010,
+time elapsed :: 0.002000093460083008
+epoch 323: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0010,
+time elapsed :: 0.002000570297241211
+epoch 324: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0019991397857666016
+epoch 325: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002000093460083008
+epoch 326: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020003318786621094
+epoch 327: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 328: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.0019998550415039062
+epoch 329: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0010,
+time elapsed :: 0.002000093460083008
+epoch 330: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.002000093460083008
+epoch 331: 
+train loss :: endogeq_base_ode: 0.0009,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.0023016929626464844
+epoch 332: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.001998424530029297
+epoch 333: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 334: 
+train loss :: endogeq_base_ode: 0.0017,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0017,
+time elapsed :: 0.002000093460083008
+epoch 335: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020024776458740234
+epoch 336: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002000093460083008
+epoch 337: 
+train loss :: endogeq_base_ode: 0.0013,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0013,
+time elapsed :: 0.003000020980834961
+epoch 338: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 339: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0027844905853271484
+epoch 340: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020029544830322266
+epoch 341: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002002239227294922
+epoch 342: 
+train loss :: endogeq_base_ode: 0.0009,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.0010020732879638672
+epoch 343: 
+train loss :: endogeq_base_ode: 0.0015,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0015,
+time elapsed :: 0.0020020008087158203
+epoch 344: 
+train loss :: endogeq_base_ode: 0.0013,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0013,
+time elapsed :: 0.004008769989013672
+epoch 345: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020036697387695312
+epoch 346: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020465850830078125
+epoch 347: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.001998424530029297
+epoch 348: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019998550415039062
+epoch 349: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030002593994140625
+epoch 350: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.003999948501586914
+epoch 351: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.003053426742553711
+epoch 352: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0014,
+time elapsed :: 0.002000093460083008
+epoch 353: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 354: 
+train loss :: endogeq_base_ode: 0.0014,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0014,
+time elapsed :: 0.0019996166229248047
+epoch 355: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002000093460083008
+epoch 356: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 357: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.002000570297241211
+epoch 358: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.0020546913146972656
+epoch 359: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0029990673065185547
+epoch 360: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0010,
+time elapsed :: 0.0029997825622558594
+epoch 361: 
+train loss :: endogeq_base_ode: 0.0009,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.0019998550415039062
+epoch 362: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 363: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 364: 
+train loss :: endogeq_base_ode: 0.0013,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0013,
+time elapsed :: 0.0019998550415039062
+epoch 365: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002026081085205078
+epoch 366: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020020008087158203
+epoch 367: 
+train loss :: endogeq_base_ode: 0.0013,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0013,
+time elapsed :: 0.0023255348205566406
+epoch 368: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0021719932556152344
+epoch 369: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002002716064453125
+epoch 370: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020020008087158203
+epoch 371: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002002716064453125
+epoch 372: 
+train loss :: endogeq_base_ode: 0.0015,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0015,
+time elapsed :: 0.0020020008087158203
+epoch 373: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020020008087158203
+epoch 374: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020017623901367188
+epoch 375: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.00278472900390625
+epoch 376: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0019981861114501953
+epoch 377: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020003318786621094
+epoch 378: 
+train loss :: endogeq_base_ode: 0.0011,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0011,
+time elapsed :: 0.0019998550415039062
+epoch 379: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0007,
+time elapsed :: 0.0010001659393310547
+epoch 380: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.002018451690673828
+epoch 381: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020034313201904297
+epoch 382: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020024776458740234
+epoch 383: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0033414363861083984
+epoch 384: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.0019903182983398438
+epoch 385: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002002716064453125
+epoch 386: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020029544830322266
+epoch 387: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0010018348693847656
+epoch 388: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0020020008087158203
+epoch 389: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002002239227294922
+epoch 390: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0008,
+time elapsed :: 0.0020020008087158203
+epoch 391: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0036652088165283203
+epoch 392: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.0021398067474365234
+epoch 393: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020029544830322266
+epoch 394: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020020008087158203
+epoch 395: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0006,
+time elapsed :: 0.0020017623901367188
+epoch 396: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0020020008087158203
+epoch 397: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020017623901367188
+epoch 398: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020020008087158203
+epoch 399: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0025115013122558594
+epoch 400: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.004193782806396484
+epoch 401: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002002239227294922
+epoch 402: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.004004716873168945
+epoch 403: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020020008087158203
+epoch 404: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020024776458740234
+epoch 405: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0025031566619873047
+epoch 406: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.002133607864379883
+epoch 407: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020029544830322266
+epoch 408: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002002239227294922
+epoch 409: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020017623901367188
+epoch 410: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020020008087158203
+epoch 411: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0020020008087158203
+epoch 412: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020017623901367188
+epoch 413: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002485036849975586
+epoch 414: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0021352767944335938
+epoch 415: 
+train loss :: endogeq_base_ode: 0.0009,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.0020024776458740234
+epoch 416: 
+train loss :: endogeq_base_ode: 0.0009,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0009,
+time elapsed :: 0.002002239227294922
+epoch 417: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0040051937103271484
+epoch 418: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020029544830322266
+epoch 419: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020024776458740234
+epoch 420: 
+train loss :: endogeq_base_ode: 0.0011,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0011,
+time elapsed :: 0.001743316650390625
+epoch 421: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002816915512084961
+epoch 422: 
+train loss :: endogeq_base_ode: 0.0011,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.002050161361694336
+epoch 423: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0009,
+time elapsed :: 0.0019996166229248047
+epoch 424: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020003318786621094
+epoch 425: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020020008087158203
+epoch 426: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 427: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019998550415039062
+epoch 428: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0004,
+time elapsed :: 0.0020003318786621094
+epoch 429: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0010004043579101562
+epoch 430: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.004023075103759766
+epoch 431: 
+train loss :: endogeq_base_ode: 0.0012,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0012,
+time elapsed :: 0.002002239227294922
+epoch 432: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0005021095275878906
+epoch 433: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.003530740737915039
+epoch 434: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002103567123413086
+epoch 435: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.002000093460083008
+epoch 436: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.001999378204345703
+epoch 437: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002819538116455078
+epoch 438: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.001800537109375
+epoch 439: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.003036975860595703
+epoch 440: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0026388168334960938
+epoch 441: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019981861114501953
+epoch 442: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020003318786621094
+epoch 443: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002469778060913086
+epoch 444: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0015821456909179688
+epoch 445: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002998828887939453
+epoch 446: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019998550415039062
+epoch 447: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0018455982208251953
+epoch 448: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020241737365722656
+epoch 449: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.001999378204345703
+epoch 450: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.004410982131958008
+epoch 451: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019981861114501953
+epoch 452: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0029997825622558594
+epoch 453: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 454: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 455: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 456: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020003318786621094
+epoch 457: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.002000093460083008
+epoch 458: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.003000020980834961
+epoch 459: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002000093460083008
+epoch 460: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 461: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 462: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 463: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020003318786621094
+epoch 464: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 465: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0006,
+time elapsed :: 0.0020017623901367188
+epoch 466: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.00299835205078125
+epoch 467: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019998550415039062
+epoch 468: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020020008087158203
+epoch 469: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020012855529785156
+epoch 470: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 471: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 472: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002001523971557617
+epoch 473: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 474: 
+train loss :: endogeq_base_ode: 0.0011,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0011,
+time elapsed :: 0.001998424530029297
+epoch 475: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019998550415039062
+epoch 476: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0025038719177246094
+epoch 477: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002003908157348633
+epoch 478: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0020003318786621094
+epoch 479: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002883434295654297
+epoch 480: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0020160675048828125
+epoch 481: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0023331642150878906
+epoch 482: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.001998424530029297
+epoch 483: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0016851425170898438
+epoch 484: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020236968994140625
+epoch 485: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019996166229248047
+epoch 486: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 487: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002953052520751953
+epoch 488: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019979476928710938
+epoch 489: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002001047134399414
+epoch 490: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0020008087158203125
+epoch 491: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.00299835205078125
+epoch 492: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 493: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 494: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 495: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020356178283691406
+epoch 496: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0024209022521972656
+epoch 497: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0021698474884033203
+epoch 498: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002759695053100586
+epoch 499: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019996166229248047
+epoch 500: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.003646373748779297
+epoch 501: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030260086059570312
+epoch 502: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002210855484008789
+epoch 503: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0028553009033203125
+epoch 504: 
+train loss :: endogeq_base_ode: 0.0010,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0010,
+time elapsed :: 0.002022981643676758
+epoch 505: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.001999378204345703
+epoch 506: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 507: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0028939247131347656
+epoch 508: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.001998424530029297
+epoch 509: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002000093460083008
+epoch 510: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002122640609741211
+epoch 511: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0019116401672363281
+epoch 512: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019986629486083984
+epoch 513: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002000093460083008
+epoch 514: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.003002643585205078
+epoch 515: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019996166229248047
+epoch 516: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002000093460083008
+epoch 517: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 518: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002000570297241211
+epoch 519: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002999544143676758
+epoch 520: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 521: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.001505136489868164
+epoch 522: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.003000020980834961
+epoch 523: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 524: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 525: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020020008087158203
+epoch 526: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019986629486083984
+epoch 527: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 528: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 529: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002400636672973633
+epoch 530: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0030291080474853516
+epoch 531: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019996166229248047
+epoch 532: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 533: 
+train loss :: endogeq_base_ode: 0.0008,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0008,
+time elapsed :: 0.0022339820861816406
+epoch 534: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0019986629486083984
+epoch 535: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019998550415039062
+epoch 536: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002783060073852539
+epoch 537: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002038240432739258
+epoch 538: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019996166229248047
+epoch 539: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 540: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0024192333221435547
+epoch 541: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0021872520446777344
+epoch 542: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.001999378204345703
+epoch 543: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002422332763671875
+epoch 544: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002025604248046875
+epoch 545: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019996166229248047
+epoch 546: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 547: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0018782615661621094
+epoch 548: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002434253692626953
+epoch 549: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019981861114501953
+epoch 550: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.004629373550415039
+epoch 551: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.00299835205078125
+epoch 552: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 553: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002118349075317383
+epoch 554: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.0024700164794921875
+epoch 555: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.001999378204345703
+epoch 556: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 557: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030024051666259766
+epoch 558: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 559: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 560: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0030007362365722656
+epoch 561: 
+train loss :: endogeq_base_ode: 0.0007,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0007,
+time elapsed :: 0.002000570297241211
+epoch 562: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 563: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0024912357330322266
+epoch 564: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019521713256835938
+epoch 565: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.001999378204345703
+epoch 566: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002000093460083008
+epoch 567: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 568: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 569: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002001047134399414
+epoch 570: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.001999378204345703
+epoch 571: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030002593994140625
+epoch 572: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 573: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002000093460083008
+epoch 574: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019998550415039062
+epoch 575: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0021843910217285156
+epoch 576: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019989013671875
+epoch 577: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019986629486083984
+epoch 578: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 579: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019998550415039062
+epoch 580: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 581: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 582: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 583: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 584: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003002643585205078
+epoch 585: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0029990673065185547
+epoch 586: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.00299835205078125
+epoch 587: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 588: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0
+epoch 589: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.003569364547729492
+epoch 590: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0031061172485351562
+epoch 591: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002003908157348633
+epoch 592: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0013566017150878906
+epoch 593: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002341032028198242
+epoch 594: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020029544830322266
+epoch 595: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002002239227294922
+epoch 596: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002994537353515625
+epoch 597: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020024776458740234
+epoch 598: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002479076385498047
+epoch 599: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002003908157348633
+epoch 600: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.00400543212890625
+epoch 601: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.004476785659790039
+epoch 602: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002002716064453125
+epoch 603: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002716064453125
+epoch 604: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0022869110107421875
+epoch 605: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002004861831665039
+epoch 606: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020055770874023438
+epoch 607: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020041465759277344
+epoch 608: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002002239227294922
+epoch 609: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0028564929962158203
+epoch 610: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020024776458740234
+epoch 611: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030481815338134766
+epoch 612: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.003000497817993164
+epoch 613: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0029985904693603516
+epoch 614: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002058744430541992
+epoch 615: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.001999378204345703
+epoch 616: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 617: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 618: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030024051666259766
+epoch 619: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019979476928710938
+epoch 620: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019998550415039062
+epoch 621: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0023534297943115234
+epoch 622: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002003908157348633
+epoch 623: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002003192901611328
+epoch 624: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002003192901611328
+epoch 625: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020020008087158203
+epoch 626: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0025277137756347656
+epoch 627: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.004008769989013672
+epoch 628: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020029544830322266
+epoch 629: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.0020020008087158203
+epoch 630: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020020008087158203
+epoch 631: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 632: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020017623901367188
+epoch 633: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.003138303756713867
+epoch 634: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001997709274291992
+epoch 635: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 636: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0013191699981689453
+epoch 637: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002002716064453125
+epoch 638: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020020008087158203
+epoch 639: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020020008087158203
+epoch 640: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002322673797607422
+epoch 641: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0017867088317871094
+epoch 642: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020029544830322266
+epoch 643: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002000093460083008
+epoch 644: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0030050277709960938
+epoch 645: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019996166229248047
+epoch 646: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020003318786621094
+epoch 647: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 648: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003001689910888672
+epoch 649: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001998424530029297
+epoch 650: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 651: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0035054683685302734
+epoch 652: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 653: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 654: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 655: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 656: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.00299835205078125
+epoch 657: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 658: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0010004043579101562
+epoch 659: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.006245851516723633
+epoch 660: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020034313201904297
+epoch 661: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.00453948974609375
+epoch 662: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.004999637603759766
+epoch 663: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.004000186920166016
+epoch 664: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0029990673065185547
+epoch 665: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002650022506713867
+epoch 666: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.003003358840942383
+epoch 667: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.003435373306274414
+epoch 668: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020041465759277344
+epoch 669: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0040056705474853516
+epoch 670: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020024776458740234
+epoch 671: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.003203868865966797
+epoch 672: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019981861114501953
+epoch 673: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019998550415039062
+epoch 674: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002334117889404297
+epoch 675: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002003192901611328
+epoch 676: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 677: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002018451690673828
+epoch 678: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0032501220703125
+epoch 679: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019989013671875
+epoch 680: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 681: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0010001659393310547
+epoch 682: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0022611618041992188
+epoch 683: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.004006385803222656
+epoch 684: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0004,
+time elapsed :: 0.0020024776458740234
+epoch 685: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002002239227294922
+epoch 686: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002398252487182617
+epoch 687: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 688: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002501964569091797
+epoch 689: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002003192901611328
+epoch 690: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 691: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020003318786621094
+epoch 692: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 693: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 694: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002267599105834961
+epoch 695: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.001999378204345703
+epoch 696: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 697: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 698: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 699: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 700: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0040569305419921875
+epoch 701: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030193328857421875
+epoch 702: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 703: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 704: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 705: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 706: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020003318786621094
+epoch 707: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 708: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 709: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 710: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 711: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 712: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 713: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 714: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 715: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002001523971557617
+epoch 716: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.001998424530029297
+epoch 717: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 718: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0019998550415039062
+epoch 719: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 720: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 721: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 722: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 723: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002001523971557617
+epoch 724: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019986629486083984
+epoch 725: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 726: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002039670944213867
+epoch 727: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002002716064453125
+epoch 728: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 729: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 730: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.00150299072265625
+epoch 731: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030040740966796875
+epoch 732: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019986629486083984
+epoch 733: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002050161361694336
+epoch 734: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0015020370483398438
+epoch 735: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002002716064453125
+epoch 736: 
+train loss :: endogeq_base_ode: 0.0006,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0006,
+time elapsed :: 0.002000093460083008
+epoch 737: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 738: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019996166229248047
+epoch 739: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020024776458740234
+epoch 740: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.001998424530029297
+epoch 741: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 742: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019996166229248047
+epoch 743: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 744: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 745: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 746: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 747: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002001523971557617
+epoch 748: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030519962310791016
+epoch 749: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 750: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 751: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 752: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002001047134399414
+epoch 753: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 754: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0014371871948242188
+epoch 755: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020036697387695312
+epoch 756: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002002716064453125
+epoch 757: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020020008087158203
+epoch 758: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002002239227294922
+epoch 759: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020020008087158203
+epoch 760: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0028879642486572266
+epoch 761: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002716064453125
+epoch 762: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003314495086669922
+epoch 763: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 764: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 765: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002216339111328125
+epoch 766: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002004384994506836
+epoch 767: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002004384994506836
+epoch 768: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020029544830322266
+epoch 769: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0029735565185546875
+epoch 770: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020041465759277344
+epoch 771: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002003908157348633
+epoch 772: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020029544830322266
+epoch 773: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 774: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002716064453125
+epoch 775: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002716064453125
+epoch 776: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0035037994384765625
+epoch 777: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0016100406646728516
+epoch 778: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0020036697387695312
+epoch 779: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 780: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0015017986297607422
+epoch 781: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002780914306640625
+epoch 782: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020034313201904297
+epoch 783: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020020008087158203
+epoch 784: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0033876895904541016
+epoch 785: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020034313201904297
+epoch 786: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 787: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0030031204223632812
+epoch 788: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019969940185546875
+epoch 789: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 790: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 791: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020003318786621094
+epoch 792: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030014514923095703
+epoch 793: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.001998424530029297
+epoch 794: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 795: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002716064453125
+epoch 796: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.001997709274291992
+epoch 797: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 798: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 799: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 800: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.005000114440917969
+epoch 801: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030045509338378906
+epoch 802: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002996206283569336
+epoch 803: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020613670349121094
+epoch 804: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019991397857666016
+epoch 805: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030014514923095703
+epoch 806: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019986629486083984
+epoch 807: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019996166229248047
+epoch 808: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 809: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020008087158203125
+epoch 810: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.001999378204345703
+epoch 811: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030002593994140625
+epoch 812: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 813: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.003000497817993164
+epoch 814: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 815: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 816: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 817: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002716064453125
+epoch 818: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 819: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 820: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019998550415039062
+epoch 821: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020008087158203125
+epoch 822: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.001999378204345703
+epoch 823: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 824: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0012729167938232422
+epoch 825: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.004004955291748047
+epoch 826: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020024776458740234
+epoch 827: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002239227294922
+epoch 828: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0016314983367919922
+epoch 829: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020041465759277344
+epoch 830: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0029993057250976562
+epoch 831: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0010001659393310547
+epoch 832: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002775907516479492
+epoch 833: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002003192901611328
+epoch 834: 
+train loss :: endogeq_base_ode: 0.0005,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.0020036697387695312
+epoch 835: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002003192901611328
+epoch 836: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002886533737182617
+epoch 837: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.001997709274291992
+epoch 838: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 839: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0009999275207519531
+epoch 840: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0022172927856445312
+epoch 841: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.00400543212890625
+epoch 842: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020024776458740234
+epoch 843: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0024442672729492188
+epoch 844: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002003908157348633
+epoch 845: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 846: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 847: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.002215147018432617
+epoch 848: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020024776458740234
+epoch 849: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002042055130004883
+epoch 850: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 851: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0030007362365722656
+epoch 852: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 853: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 854: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0021905899047851562
+epoch 855: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002002716064453125
+epoch 856: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0005,
+time elapsed :: 0.002050638198852539
+epoch 857: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019996166229248047
+epoch 858: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 859: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0002,
+time elapsed :: 0.001998424530029297
+epoch 860: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 861: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0003,
+time elapsed :: 0.003002166748046875
+epoch 862: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002001523971557617
+epoch 863: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 864: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 865: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0001,
+total_loss: 0.0002,
+time elapsed :: 0.0029997825622558594
+epoch 866: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002001047134399414
+epoch 867: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.0019991397857666016
+epoch 868: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.00232696533203125
+epoch 869: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0010044574737548828
+epoch 870: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0031015872955322266
+epoch 871: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020024776458740234
+epoch 872: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.004006385803222656
+epoch 873: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0016007423400878906
+epoch 874: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002585887908935547
+epoch 875: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002037525177001953
+epoch 876: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 877: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 878: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 879: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 880: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 881: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0021708011627197266
+epoch 882: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019981861114501953
+epoch 883: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 884: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 885: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 886: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 887: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019996166229248047
+epoch 888: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 889: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0028464794158935547
+epoch 890: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019989013671875
+epoch 891: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 892: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 893: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0015528202056884766
+epoch 894: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019986629486083984
+epoch 895: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 896: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 897: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 898: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019989013671875
+epoch 899: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.001999378204345703
+epoch 900: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030014514923095703
+epoch 901: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002998828887939453
+epoch 902: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 903: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 904: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020110607147216797
+epoch 905: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.00299835205078125
+epoch 906: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019998550415039062
+epoch 907: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 908: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 909: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020020008087158203
+epoch 910: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0020003318786621094
+epoch 911: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 912: 
+train loss :: endogeq_base_ode: 0.0004,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0004,
+time elapsed :: 0.003001689910888672
+epoch 913: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019981861114501953
+epoch 914: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 915: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020003318786621094
+epoch 916: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0015056133270263672
+epoch 917: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 918: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030002593994140625
+epoch 919: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0014972686767578125
+epoch 920: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0018973350524902344
+epoch 921: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002255678176879883
+epoch 922: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0028409957885742188
+epoch 923: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020203590393066406
+epoch 924: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001999378204345703
+epoch 925: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 926: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001956939697265625
+epoch 927: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002025127410888672
+epoch 928: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0015690326690673828
+epoch 929: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002252340316772461
+epoch 930: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019996166229248047
+epoch 931: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002196073532104492
+epoch 932: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0019996166229248047
+epoch 933: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019998550415039062
+epoch 934: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0029687881469726562
+epoch 935: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019981861114501953
+epoch 936: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.001367807388305664
+epoch 937: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002123117446899414
+epoch 938: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002566099166870117
+epoch 939: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019986629486083984
+epoch 940: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 941: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 942: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020003318786621094
+epoch 943: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020003318786621094
+epoch 944: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020012855529785156
+epoch 945: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019989013671875
+epoch 946: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0029997825622558594
+epoch 947: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020003318786621094
+epoch 948: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 949: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.003000020980834961
+epoch 950: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.004000425338745117
+epoch 951: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019981861114501953
+epoch 952: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 953: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.001999378204345703
+epoch 954: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020034313201904297
+epoch 955: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019996166229248047
+epoch 956: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0029997825622558594
+epoch 957: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 958: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000570297241211
+epoch 959: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019996166229248047
+epoch 960: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.003000020980834961
+epoch 961: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0015048980712890625
+epoch 962: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000570297241211
+epoch 963: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019996166229248047
+epoch 964: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 965: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 966: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0030002593994140625
+epoch 967: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 968: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019998550415039062
+epoch 969: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 970: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0024526119232177734
+epoch 971: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.001999378204345703
+epoch 972: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002000093460083008
+epoch 973: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0018711090087890625
+epoch 974: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0021657943725585938
+epoch 975: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 976: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019998550415039062
+epoch 977: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019631385803222656
+epoch 978: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002018451690673828
+epoch 979: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 980: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.003000020980834961
+epoch 981: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0023627281188964844
+epoch 982: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0030930042266845703
+epoch 983: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019996166229248047
+epoch 984: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000570297241211
+epoch 985: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019991397857666016
+epoch 986: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.002000093460083008
+epoch 987: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.003000020980834961
+epoch 988: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0020017623901367188
+epoch 989: 
+train loss :: endogeq_base_ode: 0.0003,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0003,
+time elapsed :: 0.0030014514923095703
+epoch 990: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0019974708557128906
+epoch 991: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.002001523971557617
+epoch 992: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.001998424530029297
+epoch 993: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019998550415039062
+epoch 994: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0019998550415039062
+epoch 995: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0020003318786621094
+epoch 996: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.0030002593994140625
+epoch 997: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000093460083008
+epoch 998: 
+train loss :: endogeq_base_ode: 0.0001,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0001,
+time elapsed :: 0.002000570297241211
+epoch 999: 
+train loss :: endogeq_base_ode: 0.0002,
+endogvar_x_cond_initial_condition: 0.0000,
+total_loss: 0.0002,
+time elapsed :: 0.0040018558502197266
+training finished, total time :: 2.2743020057678223
