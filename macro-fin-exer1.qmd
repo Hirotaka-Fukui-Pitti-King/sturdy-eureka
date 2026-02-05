@@ -6,10 +6,9 @@ execute:
   echo: false
   warning: false
   message: false
-format: typst
-engine: jupyter #knitr for R, jupyter for Python
-execute:
+  engine: jupyter
   kernel: "Python (deep-macrofin)"
+format: typst
 brand:
   typography:      
     fonts:
