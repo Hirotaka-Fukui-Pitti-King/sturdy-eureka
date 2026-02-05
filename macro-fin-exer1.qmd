@@ -8,6 +8,8 @@ execute:
   message: false
 format: typst
 engine: jupyter #knitr for R, jupyter for Python
+execute:
+  kernel: "Python (deep-macrofin)"
 brand:
   typography:      
     fonts:
